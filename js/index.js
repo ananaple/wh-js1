@@ -31,10 +31,9 @@ function solveQuation(a, b, c) {
         return {
             x1: (-b + Math.sqrt(Dis)) / (2 * a),
             x2: (-b - Math.sqrt(Dis)) / (2 * a),
-          //  sum: function() { return this.x1 + this.x2; }   
-        }
+            }
     } else {
-        throw 'No solution';
+        throw 'No solution - немає коренів';
     }
 }
 
@@ -45,7 +44,7 @@ try {
     
     document.write(a + "x<sup>2</sup>+" + b + "x+" + c + "=0 <br/>");
     document.write("x1=" + result.x1 + "; x2= " + result.x2 + "<br/>");
-    // document.write(result.sum());
+    
 } catch (error) {
-    alert(error.message);
+    alert(error);    //alert(error.message) виводить undefined
 }
